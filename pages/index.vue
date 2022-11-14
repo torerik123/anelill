@@ -2,12 +2,13 @@
 	<div>
 		<!-- Hero img -->
 		<v-sheet class="px-15 pt-10 overflow-hidden" height="auto">
-		<v-img
-			width="100%"
-			contain
-			src="/assets/taakeskog.jpg"
-		></v-img>
-	</v-sheet>
+			<v-img
+				width="100%"
+				max-height="80vh"
+				
+				src="/assets/taakeskog.jpg"
+			></v-img>
+		</v-sheet>
 
 	<!-- About  -->
 	<v-sheet id="about" height="auto">
