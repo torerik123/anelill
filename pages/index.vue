@@ -10,7 +10,7 @@
 	</v-sheet>
 
 	<!-- About  -->
-	<v-sheet id="#about" height="auto">
+	<v-sheet id="about" height="auto">
 		<v-row>
 			<v-col cols="12" class="px-15 text-center">
 				<h2 class="py-10">Ane Lill is a norwegian artist based in Trondheim</h2>
@@ -20,7 +20,7 @@
 	
 
 	<!-- Images  -->
-	<v-sheet id="#gallery" height="auto" class="">
+	<v-sheet id="gallery" height="auto" class="">
 		<v-row dense no-gutters class="px-15 justify-space-between">
 			<v-col cols="6" class="">
 				<v-img
@@ -68,7 +68,7 @@
 	</v-sheet>
 
 	<!-- Contact  -->
-	<v-sheet id="#contact" height="auto">
+	<v-sheet id="contact" height="auto">
 		<v-row>
 			<v-col cols="12" class="text-center">
 				<h2 class="py-10">Contact</h2>
