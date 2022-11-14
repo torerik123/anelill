@@ -6,7 +6,7 @@
 			</v-col>
 			<v-spacer></v-spacer>
 			<v-col cols="auto">
-				<v-btn icon large ><v-icon>mdi-instagram</v-icon></v-btn>
+				<v-btn icon large link href="https://www.instagram.com/byanelill" target="_blank"><v-icon>mdi-instagram</v-icon></v-btn>
 			</v-col>
 		</v-row>
 	</v-footer>
