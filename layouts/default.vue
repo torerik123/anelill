@@ -6,18 +6,17 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer color="white" absolute app class="px-15">
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <TheFooter class="px-15"></TheFooter>
   </v-app>
 </template>
 
 <script>
-import TheHeader from '../components/TheHeader.vue';
+import TheHeader from '~/components/TheHeader.vue';
+import TheFooter from '~/components/TheFooter.vue';
 
 export default {
   name: 'DefaultLayout',
-  components: {TheHeader},
+  components: { TheHeader, TheFooter },
 
   data() {
     return {
