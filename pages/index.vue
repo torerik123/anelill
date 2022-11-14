@@ -1,22 +1,9 @@
 <template>
 	<div>
-		<!-- Hero img -->
-		<v-sheet class="pt-10 overflow-hidden" height="auto">
-			<v-img
-				width="100%"
-				max-height="80vh"
-				src="/assets/taakeskog.jpg"
-			></v-img>
-		</v-sheet>
+		<HeroSection></HeroSection>
 
-	<!-- About  -->
-	<v-sheet id="about" height="auto">
-		<v-row dense no-gutters>
-			<v-col cols="12" class="text-center">
-				<h2 class="py-10">Ane Lill is a norwegian artist based in Trondheim</h2>
-			</v-col>
-		</v-row>
-	</v-sheet>
+		<!-- About  -->
+		<SectionHeader text="Ane Lill is a norwegian artist based in Trondheim"></SectionHeader>
 	
 
 	<!-- Images  -->
@@ -67,25 +54,18 @@
 		</v-row>
 	</v-sheet>
 
-	<!-- Contact  -->
-	<v-sheet id="contact" height="auto">
-		<v-row>
-			<v-col cols="12" class="text-center">
-				<h2 class="py-10">Contact</h2>
-			</v-col>
-		</v-row>
-
-		<v-row dense no-gutters class="px-15">
-			<v-col cols="12">
-				<v-form class="mx-auto mb-2" style="width: 60%;">
-					<v-text-field solo label="Name" hide-details class="mb-4"></v-text-field>
-					<v-text-field solo label="Email" hide-details class="mb-4"></v-text-field>
-					<v-textarea solo label="Message" hide-details class="mb-4"></v-textarea>
-					<v-btn type="submit" color="primary">Submit</v-btn>
-				</v-form>
-			</v-col>
-		</v-row>
-	</v-sheet>
+	<ContactForm></ContactForm>	
 
 	</div>
 </template>
+
+<script>
+import ContactForm from "../components/ContactForm.vue";
+import HeroSection from "../components/HeroSection.vue";
+import SectionHeader from "../components/SectionHeader.vue";
+
+export default {
+	name: "Index",
+	components: {ContactForm, HeroSection, SectionHeader}
+}
+</script>
