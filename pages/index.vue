@@ -1,19 +1,18 @@
 <template>
 	<div>
 		<!-- Hero img -->
-		<v-sheet class="px-15 pt-10 overflow-hidden" height="auto">
+		<v-sheet class="pt-10 overflow-hidden" height="auto">
 			<v-img
 				width="100%"
 				max-height="80vh"
-				
 				src="/assets/taakeskog.jpg"
 			></v-img>
 		</v-sheet>
 
 	<!-- About  -->
 	<v-sheet id="about" height="auto">
-		<v-row>
-			<v-col cols="12" class="px-15 text-center">
+		<v-row dense no-gutters>
+			<v-col cols="12" class="text-center">
 				<h2 class="py-10">Ane Lill is a norwegian artist based in Trondheim</h2>
 			</v-col>
 		</v-row>
@@ -22,7 +21,7 @@
 
 	<!-- Images  -->
 	<v-sheet id="gallery" height="auto" class="">
-		<v-row dense no-gutters class="px-15 justify-space-between">
+		<v-row dense no-gutters class="justify-space-between">
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
@@ -44,7 +43,7 @@
 				</v-img>
 			</v-col>
 		</v-row>
-		<v-row dense no-gutters class="px-15 pt-10 justify-space-between">
+		<v-row dense no-gutters class="pt-10 justify-space-between">
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"

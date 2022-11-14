@@ -20,25 +20,29 @@
 				</v-hover>	
 			</v-toolbar-title>
 			<v-spacer />
-			<v-toolbar-title class="px-2" v-if="$vuetify.breakpoint.smAndUp">
+			
+			<v-toolbar-title class="" v-if="$vuetify.breakpoint.smAndUp">
 				<v-btn
 					text
+					tile
 					@click="scrollTo('about')"
 				>
 					About
 				</v-btn>
 			</v-toolbar-title>      
-			<v-toolbar-title class="px-2" v-if="$vuetify.breakpoint.smAndUp">
+			<v-toolbar-title class="" v-if="$vuetify.breakpoint.smAndUp">
 				<v-btn
 					text
+					tile
 					@click="scrollTo('gallery')"
 				>
 					Gallery
 				</v-btn>
 			</v-toolbar-title>      
-			<v-toolbar-title class="px-2" v-if="$vuetify.breakpoint.smAndUp">
+			<v-toolbar-title class="" v-if="$vuetify.breakpoint.smAndUp">
 				<v-btn
 					text
+					tile
 					@click="scrollTo('contact')"
 				>
 					Contact
