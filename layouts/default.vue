@@ -6,7 +6,7 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer color="white" absolute app>
+    <v-footer color="white" absolute app class="px-15">
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>

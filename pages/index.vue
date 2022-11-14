@@ -54,7 +54,7 @@
 		</v-row>
 	</v-sheet>
 
-	<ContactForm></ContactForm>	
+	<ContactForm class="mb-10"></ContactForm>	
 
 	</div>
 </template>
