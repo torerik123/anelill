@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<!-- Header img -->
+		<!-- Hero img -->
 		<v-sheet class="px-15 pt-10 overflow-hidden" height="auto">
 		<v-img
 			width="100%"
