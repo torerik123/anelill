@@ -4,7 +4,7 @@
 
 			<v-hover v-slot="{ hover }">
 				
-				<v-img class="" src="/img/signatur.png" max-height="100" max-width="100" contain
+				<v-img class="" :src="logo" max-height="100" max-width="100" contain
 					:style="hover ? 'cursor: pointer;' : ''" @click="$vuetify.goTo(0)"></v-img>
 			</v-hover>
 
@@ -33,7 +33,7 @@
 					<v-list-item-content>
 						<v-hover v-slot="{ hover }">
 							<v-img :style="hover ? 'cursor: pointer;' : ''" @click="$vuetify.goTo(0)" class="mx-auto"
-								src="/img/signatur.png" max-height="100" max-width="100" contain></v-img>
+								:src="logo" max-height="100" max-width="100" contain></v-img>
 						</v-hover>
 					</v-list-item-content>
 				</v-list-item>
@@ -65,6 +65,7 @@ export default {
 	data() {
 		return {
 			drawer: false,
+		    logo: require('~/assets/signatur.png'),
 		}
 	},
 

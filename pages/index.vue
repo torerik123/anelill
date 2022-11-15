@@ -12,7 +12,7 @@
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
-					src="/img/taakemaleri.jpg"
+					:src="images.taake"
 					max-width="300"
 					height="auto"
 					contain
@@ -22,7 +22,7 @@
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
-					src="/img/kraake.jpg"
+					:src="images.kraake"
 					max-width="300"
 					contain
 					height="auto"
@@ -34,7 +34,7 @@
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
-					src="/img/blameis.jpg"
+					:src="images.blameis"
 					max-width="300"
 					height="auto"
 					contain
@@ -44,7 +44,7 @@
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
-					src="/img/skisse.jpg"
+					:src="images.skisse"
 					max-width="300"
 					contain
 					height="auto"
@@ -66,6 +66,17 @@ import SectionHeader from "../components/SectionHeader.vue";
 
 export default {
 	name: "Index",
-	components: {ContactForm, HeroSection, SectionHeader}
+	components: {ContactForm, HeroSection, SectionHeader},
+
+	data() {
+		return {
+			images: {
+				taake: require('~/assets/taakemaleri.jpg'),
+				kraake: require('~/assets/kraake.jpg'),
+				blameis: require('~/assets/blameis.jpg'),
+				skisse: require('~/assets/skisse.jpg'),
+			}
+		}	
+	},
 }
 </script>

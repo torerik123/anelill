@@ -3,7 +3,7 @@
 		<v-img
 			width="100%"
 			max-height="80vh"
-			src="/img/taakeskog.jpg"
+			:src="heroImg"
 		></v-img>
 	</v-sheet>
 </template>
@@ -11,5 +11,11 @@
 <script>
 export default {
 	name: "HeroSection",
+
+	data() {
+		return {
+			heroImg: require('~/assets/taakeskog.jpg'),	
+		}
+	},
 }
 </script>
