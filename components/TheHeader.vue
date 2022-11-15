@@ -5,7 +5,7 @@
 			<v-hover v-slot="{ hover }">
 				
 				<v-img class="" :src="logo" max-height="100" max-width="100" contain
-					:style="hover ? 'cursor: pointer;' : ''" @click="$vuetify.goTo(0)"></v-img>
+					:style="hover ? 'cursor: pointer;' : ''" @click="scrollTo('home')"></v-img>
 			</v-hover>
 
 			<v-spacer></v-spacer>
@@ -32,7 +32,7 @@
 				<v-list-item>
 					<v-list-item-content>
 						<v-hover v-slot="{ hover }">
-							<v-img :style="hover ? 'cursor: pointer;' : ''" @click="$vuetify.goTo(0)" class="mx-auto"
+							<v-img :style="hover ? 'cursor: pointer;' : ''" @click="scrollTo('home')" class="mx-auto"
 								:src="logo" max-height="100" max-width="100" contain></v-img>
 						</v-hover>
 					</v-list-item-content>
@@ -71,10 +71,15 @@ export default {
 
 	methods: {
 		scrollTo(section) {
+			if (section == "home") {
+				this.$vuetify.goTo(0)
+			} else {
+				this.$vuetify.goTo("#" + section)
+			}
+
 			if (this.drawer) {
 				this.drawer = false
 			}
-			this.$vuetify.goTo("#" + section)
 		},
 	}
 }
