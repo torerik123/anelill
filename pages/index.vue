@@ -16,10 +16,8 @@
 				class=""
 			>
 				<ImageSingle 
-					:image="image.src" 
-					:title="image.name" 
-					:size="image.size" 
-					:sold="image.sold"
+					:image="image"
+					@open="handleOpen" 
 				></ImageSingle>
 			</v-col>
 		</v-row>
@@ -27,6 +25,14 @@
 
 	<ContactForm class="mb-10"></ContactForm>
 	
+	<v-dialog
+		v-model="dialog"
+		width="800"
+	>
+		<v-card class="pa-10 elevation-0">
+			<v-img max-height=800 contain :src="dialogImg"></v-img>
+		</v-card>
+	</v-dialog>
 	</div>
 </template>
 
@@ -42,27 +48,29 @@ export default {
 
 	data() {
 		return {
+			dialog: false,
+			dialogImg: "",
 			images: [
 				{
-					name: "Tåke",
+					title: "Tåke",
 					src: require('~/assets/taakemaleri.jpg'),
 					size: "100 x 100",
 					sold: true,
 				},
 				{
-					name: "Kråke",
+					title: "Kråke",
 					src: require('~/assets/kraake.jpg'),
 					size: "100 x 100",
 					sold: true,
 				},
 				{
-					name: "Blåmeis",
+					title: "Blåmeis",
 					src: require('~/assets/blameis.jpg'),
 					size: "100 x 100",
 					sold: false,
 				},
 				{
-					name: "Skisse",
+					title: "Skisse",
 					src: require('~/assets/skisse.jpg'),
 					size: "100 x 100",
 					sold: false, 
@@ -70,5 +78,12 @@ export default {
 			],
 		}	
 	},
+
+	methods: {
+		handleOpen(image) {
+			this.dialog = true,
+			this.dialogImg = image.src
+		},
+	}
 }
 </script>

@@ -86,6 +86,7 @@ export default {
 </script>
 
 <style scoped>
+
 /deep/ .v-toolbar__content {
 	padding: 0px !important;
 }
