@@ -47,7 +47,8 @@
 					<v-btn
 						large 
 						@click="validate"
-						color="primary">
+						color="primary"
+					>
 						Submit
 					</v-btn>
 				</v-form>

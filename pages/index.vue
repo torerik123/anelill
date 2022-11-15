@@ -9,47 +9,18 @@
 	<!-- Images  -->
 	<v-sheet id="gallery" height="auto" class="">
 		<v-row dense no-gutters class="justify-space-between">
-			<v-col cols="6" class="">
-				<v-img
-					class="mx-auto"
-					:src="images.taake"
-					max-width="300"
-					height="auto"
-					contain
-				>
-				</v-img>
-			</v-col>
-			<v-col cols="6" class="">
-				<v-img
-					class="mx-auto"
-					:src="images.kraake"
-					max-width="300"
-					contain
-					height="auto"
-				>
-				</v-img>
-			</v-col>
-		</v-row>
-		<v-row dense no-gutters class="pt-10 justify-space-between">
-			<v-col cols="6" class="">
-				<v-img
-					class="mx-auto"
-					:src="images.blameis"
-					max-width="300"
-					height="auto"
-					contain
-				>
-				</v-img>
-			</v-col>
-			<v-col cols="6" class="">
-				<v-img
-					class="mx-auto"
-					:src="images.skisse"
-					max-width="300"
-					contain
-					height="auto"
-				>
-				</v-img>
+			<v-col
+				v-for="image in images"
+				:key="image.src"
+				:cols="$vuetify.breakpoint.mdAndUp ? '4' : '6'" 
+				class=""
+			>
+				<ImageSingle 
+					:image="image.src" 
+					:title="image.name" 
+					:size="image.size" 
+					:sold="image.sold"
+				></ImageSingle>
 			</v-col>
 		</v-row>
 	</v-sheet>
@@ -63,19 +34,40 @@
 import ContactForm from "../components/ContactForm.vue";
 import HeroSection from "../components/HeroSection.vue";
 import SectionHeader from "../components/SectionHeader.vue";
+import ImageSingle from "../components/ImageSingle.vue";
 
 export default {
 	name: "Index",
-	components: {ContactForm, HeroSection, SectionHeader},
+	components: { ContactForm, HeroSection, SectionHeader, ImageSingle },
 
 	data() {
 		return {
-			images: {
-				taake: require('~/assets/taakemaleri.jpg'),
-				kraake: require('~/assets/kraake.jpg'),
-				blameis: require('~/assets/blameis.jpg'),
-				skisse: require('~/assets/skisse.jpg'),
-			}
+			images: [
+				{
+					name: "Tåke",
+					src: require('~/assets/taakemaleri.jpg'),
+					size: "100 x 100",
+					sold: true,
+				},
+				{
+					name: "Kråke",
+					src: require('~/assets/kraake.jpg'),
+					size: "100 x 100",
+					sold: true,
+				},
+				{
+					name: "Blåmeis",
+					src: require('~/assets/blameis.jpg'),
+					size: "100 x 100",
+					sold: false,
+				},
+				{
+					name: "Skisse",
+					src: require('~/assets/skisse.jpg'),
+					size: "100 x 100",
+					sold: false, 
+				}
+			],
 		}	
 	},
 }
