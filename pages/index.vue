@@ -12,7 +12,7 @@
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
-					src="/assets/taakemaleri.jpg"
+					src="/img/taakemaleri.jpg"
 					max-width="300"
 					height="auto"
 					contain
@@ -22,7 +22,7 @@
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
-					src="/assets/kraake.jpg"
+					src="/img/kraake.jpg"
 					max-width="300"
 					contain
 					height="auto"
@@ -34,7 +34,7 @@
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
-					src="/assets/blameis.jpg"
+					src="/img/blameis.jpg"
 					max-width="300"
 					height="auto"
 					contain
@@ -44,7 +44,7 @@
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
-					src="/assets/skisse.jpg"
+					src="/img/skisse.jpg"
 					max-width="300"
 					contain
 					height="auto"

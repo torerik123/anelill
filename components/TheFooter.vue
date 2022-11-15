@@ -1,8 +1,8 @@
 <template>
 	<v-footer color="white" absolute app>
 		<v-row dense no-gutters>
-			<v-col align-self=center>
-				<span>&copy; {{ new Date().getFullYear() }}</span> | Ane Lill Nerbøvik
+			<v-col cols="auto" align-self=center>
+				<span>&copy; {{ new Date().getFullYear() }} | Ane Lill Nerbøvik</span> 
 			</v-col>
 			<v-spacer></v-spacer>
 			<v-col cols="auto">

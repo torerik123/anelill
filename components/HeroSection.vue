@@ -3,7 +3,7 @@
 		<v-img
 			width="100%"
 			max-height="80vh"
-			src="/assets/taakeskog.jpg"
+			src="/img/taakeskog.jpg"
 		></v-img>
 	</v-sheet>
 </template>
