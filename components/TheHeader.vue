@@ -1,7 +1,6 @@
 <template>
 	<div>
-		<v-app-bar app color="white" elevate-on-scroll fixed class="px-15">
-
+		<v-app-bar app color="white" elevate-on-scroll fixed :class="customClass">
 			<v-hover v-slot="{ hover }">
 				
 				<v-img class="" :src="logo" max-height="100" max-width="100" contain
@@ -66,6 +65,13 @@ export default {
 		return {
 			drawer: false,
 		    logo: require('~/assets/signatur.png'),
+		}
+	},
+
+	props: {
+		customClass: {
+			type: String,
+			default: "",
 		}
 	},
 

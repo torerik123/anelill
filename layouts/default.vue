@@ -1,12 +1,12 @@
 <template>
 	<v-app dark>
-		<TheHeader></TheHeader>
+		<TheHeader :customClass="$vuetify.breakpoint.smAndDown ? 'px-5' : 'px-15'"></TheHeader>
 		<v-main>
-			<v-container fluid class="px-15 py-0">
+			<v-container fluid :class="$vuetify.breakpoint.smAndDown ? 'px-5 py-0' : 'px-15 py-0'">
 				<Nuxt />
 			</v-container>
 		</v-main>
-		<TheFooter class="px-15"></TheFooter>
+		<TheFooter :customClass="$vuetify.breakpoint.smAndDown ? 'px-5' : 'px-15'"></TheFooter>
 	</v-app>
 </template>
 
