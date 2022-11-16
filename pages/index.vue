@@ -9,6 +9,7 @@
 	<!-- Images  -->
 	<v-sheet id="gallery" height="auto" class="">
 		<v-row dense no-gutters class="justify-space-between">
+<<<<<<< Updated upstream
 			<v-col cols="6" class="">
 				<v-img
 					class="mx-auto"
@@ -50,6 +51,19 @@
 					height="auto"
 				>
 				</v-img>
+=======
+			<v-col
+				v-for="image in images"
+				:key="image.src"
+				:cols="$vuetify.breakpoint.mdAndUp ? '4' : '6'" 
+				class=""
+			>
+				<ImageSingle 
+					:image="image"
+					@open="handleOpen"
+					@viewImg="handlePreview" 
+				></ImageSingle>
+>>>>>>> Stashed changes
 			</v-col>
 		</v-row>
 	</v-sheet>
@@ -66,6 +80,55 @@ import SectionHeader from "../components/SectionHeader.vue";
 
 export default {
 	name: "Index",
+<<<<<<< Updated upstream
 	components: {ContactForm, HeroSection, SectionHeader}
+=======
+	components: { ContactForm, HeroSection, SectionHeader, ImageSingle },
+
+	data() {
+		return {
+			dialog: false,
+			dialogImg: "",
+			images: this.$store.getters.images,
+			// images: [
+			// 	{
+			// 		title: "Tåke",
+			// 		src: require('~/assets/taakemaleri.jpg'),
+			// 		size: "100 x 100",
+			// 		sold: true,
+			// 	},
+			// 	{
+			// 		title: "Kråke",
+			// 		src: require('~/assets/kraake.jpg'),
+			// 		size: "100 x 100",
+			// 		sold: true,
+			// 	},
+			// 	{
+			// 		title: "Blåmeis",
+			// 		src: require('~/assets/blameis.jpg'),
+			// 		size: "100 x 100",
+			// 		sold: false,
+			// 	},
+			// 	{
+			// 		title: "Skisse",
+			// 		src: require('~/assets/skisse.jpg'),
+			// 		size: "100 x 100",
+			// 		sold: false, 
+			// 	}
+			// ],
+		}	
+	},
+
+	methods: {
+		handlePreview(src) {
+			this.dialog = true,
+			this.dialogImg = src
+		},
+
+		handleOpen(image) {
+			console.log("todo")
+		},
+	}
+>>>>>>> Stashed changes
 }
 </script>
