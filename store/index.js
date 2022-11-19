@@ -6,6 +6,7 @@ export const state = () => ({
       src: require('~/assets/taakemaleri.jpg'),
       size: '100 x 100',
       sold: true,
+      description: "Info text 1",
     },
     {
       id: 2,
@@ -13,6 +14,7 @@ export const state = () => ({
       src: require('~/assets/kraake.jpg'),
       size: '100 x 100',
       sold: true,
+      description: "Info text 2",
     },
     {
       id: 3,
@@ -20,6 +22,7 @@ export const state = () => ({
       src: require('~/assets/blameis.jpg'),
       size: '100 x 100',
       sold: false,
+      description: "Info text 3",
     },
     {
       id: 4,
@@ -27,6 +30,7 @@ export const state = () => ({
       src: require('~/assets/skisse.jpg'),
       size: '100 x 100',
       sold: false,
+      description: "Info text 4",
     },
   ],
 })

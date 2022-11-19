@@ -55,7 +55,8 @@ export default {
 
 	methods: {
 		viewImg() {
-			this.$emit("viewImg", this.image.src)
+			const index = this.$store.getters.images.indexOf(this.image)
+			this.$emit("viewImg", index)
 		},	
 	}
 }
