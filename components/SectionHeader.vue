@@ -1,11 +1,20 @@
 <template>
-	<v-sheet id="about" height="auto">
-		<v-row dense no-gutters>
-			<v-col cols="12" class="text-center">
-				<h2 class="py-10">{{ text }}</h2>
-			</v-col>
-		</v-row>
-	</v-sheet>
+	<v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: .5
+        }"
+        min-height="200"
+        transition="fade-transition"
+    >
+		<v-sheet id="about" height="auto">
+			<v-row dense no-gutters>
+				<v-col cols="12" class="text-center">
+					<h2 class="py-10">{{ text }}</h2>
+				</v-col>
+			</v-row>
+		</v-sheet>
+	</v-lazy>
 </template>
 
 <script>

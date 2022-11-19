@@ -3,7 +3,7 @@ export const state = () => ({
     {
       id: 1,
       title: 'Tåke',
-      src: require('~/assets/taakemaleri.jpg'),
+      src: require('~/static/taakemaleri.jpg'),
       size: '100 x 100',
       sold: true,
       description: "Info text 1",
@@ -11,7 +11,7 @@ export const state = () => ({
     {
       id: 2,
       title: 'Kråke',
-      src: require('~/assets/kraake.jpg'),
+      src: require('~/static/kraake.jpg'),
       size: '100 x 100',
       sold: true,
       description: "Info text 2",
@@ -19,7 +19,7 @@ export const state = () => ({
     {
       id: 3,
       title: 'Blåmeis',
-      src: require('~/assets/blameis.jpg'),
+      src: require('~/static/blameis.jpg'),
       size: '100 x 100',
       sold: false,
       description: "Info text 3",
@@ -27,17 +27,25 @@ export const state = () => ({
     {
       id: 4,
       title: 'Skisse',
-      src: require('~/assets/skisse.jpg'),
+      src: require('~/static/skisse.jpg'),
       size: '100 x 100',
       sold: false,
       description: "Info text 4",
     },
   ],
+  heroImg: require('~/static/taakeskog.jpg'),
+  headerImg: require('~/static/signatur.png'),
 })
 
 export const getters = {
   images(state) {
     return state.images
+  },
+  heroImg(state) {
+    return state.heroImg
+  },
+  headerImg(state) {
+    return state.headerImg
   },
 }
 

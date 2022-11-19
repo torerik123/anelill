@@ -1,78 +1,86 @@
 <template>
-	<v-sheet id="contact" height="auto">
-		<v-row>
-			<v-col cols="12" class="text-center">
-				<h2 class="py-10">Contact</h2>
-			</v-col>
-		</v-row>
+	<v-lazy
+        v-model="isActive"
+        :options="{
+          threshold: .5
+        }"
+        min-height="200"
+        transition="fade-transition"
+    >
+		<v-sheet id="contact" height="auto">
+			<v-row>
+				<v-col cols="12" class="text-center">
+					<h2 class="py-10">Contact</h2>
+				</v-col>
+			</v-row>
 
-		<p class="text-center" v-if="messageSent">{{ messageDeliveredText }}</p>
-				
-		<v-sheet :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%' " class="mx-auto" >
-			<v-form 
-				ref="form"
-				@submit.prevent="submitForm"
-				class="mx-auto mb-2" 
-			>
-				<v-row dense no-gutters class="">
-					<v-col cols="12">
-						<v-text-field 
-							label="Name"
-							v-model="name" 
-							required 
-							solo 
-							hide-details="auto" 
-							class="mb-4"
-							:rules="[rules.required]"
-						>
-						</v-text-field>
-					</v-col>
-				</v-row>
-				<v-row dense no-gutters class="">
-					<v-col cols="12">
-						<v-text-field 
-							label="Email" 
-							v-model="email" 
-							required 
-							solo 
-							hide-details="auto" 
-							class="mb-4"
-							:rules="[rules.email]"
-						></v-text-field>
-					</v-col>
-				</v-row>
-				<v-row dense no-gutters class="">
-					<v-col cols="12">
-						<v-textarea 
-							label="Message"
-							v-model="message"
-							required 
-							solo 
-							hide-details="auto" 
-							class="mb-4"
-							:rules="[rules.required]"
-						>
-						</v-textarea>
-					</v-col>
-				</v-row>
-				<v-row dense no-gutters class="">
-					<v-col cols="12">
-						<v-spacer></v-spacer>
-						<v-btn
-							large
-							:block="$vuetify.breakpoint.smAndDown"
-							type="submit"
-							color="primary"
-							class=""
-						>
-							Submit
-						</v-btn>
-					</v-col>
-				</v-row>
-			</v-form>
+			<p class="text-center" v-if="messageSent">{{ messageDeliveredText }}</p>
+					
+			<v-sheet :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%' " class="mx-auto" >
+				<v-form 
+					ref="form"
+					@submit.prevent="submitForm"
+					class="mx-auto mb-2" 
+				>
+					<v-row dense no-gutters class="">
+						<v-col cols="12">
+							<v-text-field 
+								label="Name"
+								v-model="name" 
+								required 
+								solo 
+								hide-details="auto" 
+								class="mb-4"
+								:rules="[rules.required]"
+							>
+							</v-text-field>
+						</v-col>
+					</v-row>
+					<v-row dense no-gutters class="">
+						<v-col cols="12">
+							<v-text-field 
+								label="Email" 
+								v-model="email" 
+								required 
+								solo 
+								hide-details="auto" 
+								class="mb-4"
+								:rules="[rules.email]"
+							></v-text-field>
+						</v-col>
+					</v-row>
+					<v-row dense no-gutters class="">
+						<v-col cols="12">
+							<v-textarea 
+								label="Message"
+								v-model="message"
+								required 
+								solo 
+								hide-details="auto" 
+								class="mb-4"
+								:rules="[rules.required]"
+							>
+							</v-textarea>
+						</v-col>
+					</v-row>
+					<v-row dense no-gutters class="">
+						<v-col cols="12">
+							<v-spacer></v-spacer>
+							<v-btn
+								large
+								:block="$vuetify.breakpoint.smAndDown"
+								type="submit"
+								color="primary"
+								class=""
+							>
+								Submit
+							</v-btn>
+						</v-col>
+					</v-row>
+				</v-form>
+			</v-sheet>
 		</v-sheet>
-		
-	</v-sheet>
+	</v-lazy>
 </template>
 
 <script>

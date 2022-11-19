@@ -64,7 +64,7 @@ export default {
 	data() {
 		return {
 			drawer: false,
-		    logo: require('~/assets/signatur.png'),
+		    logo: this.$store.getters.headerImg,
 		}
 	},
 

@@ -1,7 +1,17 @@
 <template>
 	<div>
-		<!-- Hero image -->
-		<HeroSection></HeroSection>
+		<v-lazy
+        	v-model="HeroSection"
+			:options="{
+			threshold: .5
+			}"
+			min-height="200"
+			transition="fade-transition"
+		>
+					<!-- Hero image -->
+					<HeroSection></HeroSection>
+		</v-lazy>
+
 
 		<!-- About  -->
 		<SectionHeader text="Ane Lill is a norwegian artist based in Trondheim"></SectionHeader>
