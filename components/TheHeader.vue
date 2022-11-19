@@ -3,7 +3,7 @@
 		<v-app-bar app color="white" elevate-on-scroll fixed :class="customClass">
 			<v-hover v-slot="{ hover }">
 				
-				<v-img class="" :src="logo" max-height="100" max-width="100" contain
+				<v-img class="" :lazy-src="logo" :src="logo" max-height="100" max-width="100" contain
 					:style="hover ? 'cursor: pointer;' : ''" @click="$router.push('/')"></v-img>
 			</v-hover>
 

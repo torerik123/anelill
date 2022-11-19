@@ -54,7 +54,10 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     treeShake: true,
-    defaultAssets: { font: false },
+    defaultAssets: { 
+      font: false,
+      icons: 'mdi-instagram' 
+    },
     theme: {
       light:true,
       themes: {

@@ -12,6 +12,7 @@
 				width="100%"
 				max-height="80vh"
 				:src="heroImg"
+				:lazy-src="heroImg"
 			></v-img>
 		</v-sheet>
 	</v-lazy>

@@ -6,6 +6,7 @@
 				<v-carousel-item
 					v-for="image in images"
 					:key="image.src"
+					:lazy-src="image.src"
 					:src="image.src"
 					max-height="70vh"
 					contain

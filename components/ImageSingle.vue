@@ -10,6 +10,7 @@
 					:style="hover ? 'cursor: pointer;' : ''" 
 					@click="viewImg"
 					class=""
+					:lazy-src="image.src"
 					:src="image.src"
 					max-width="300"
 					height="auto"
