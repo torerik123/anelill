@@ -31,8 +31,7 @@
 				<v-btn
 					tile
 					outlined
-					nuxt
-					:to="'/art/' + image.id"
+					@click="viewImg"
 				>
 					Info
 				</v-btn>
