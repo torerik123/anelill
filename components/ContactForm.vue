@@ -7,54 +7,71 @@
 		</v-row>
 
 		<p class="text-center" v-if="messageSent">{{ messageDeliveredText }}</p>
-
-		<v-row dense no-gutters class="">
-			<v-col cols="12">
-				<v-form 
-					ref="form"
-					@submit.prevent="submitForm"
-					class="mx-auto mb-2" 
-					:style="$vuetify.breakpoint.smAndDown ? 'width: 100%;' : 'width: 70%;' "
-				>
-					<v-text-field 
-						label="Name"
-						v-model="name" 
-						required 
-						solo 
-						hide-details="auto" 
-						class="mb-4"
-						:rules="[rules.required]"
-					>
-					</v-text-field>
-					<v-text-field 
-						label="Email" 
-						v-model="email" 
-						required 
-						solo 
-						hide-details="auto" 
-						class="mb-4"
-						:rules="[rules.email]"
-					></v-text-field>
-					<v-textarea 
-						label="Message"
-						v-model="message"
-						required 
-						solo 
-						hide-details="auto" 
-						class="mb-4"
-						:rules="[rules.required]"
-					>
-					</v-textarea>
-					<v-btn
-						large 
-						type="submit"
-						color="primary"
-					>
-						Submit
-					</v-btn>
-				</v-form>
-			</v-col>
-		</v-row>
+				
+		<v-sheet :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%' " class="mx-auto" >
+			<v-form 
+				ref="form"
+				@submit.prevent="submitForm"
+				class="mx-auto mb-2" 
+			>
+				<v-row dense no-gutters class="">
+					<v-col cols="12">
+						<v-text-field 
+							label="Name"
+							v-model="name" 
+							required 
+							solo 
+							hide-details="auto" 
+							class="mb-4"
+							:rules="[rules.required]"
+						>
+						</v-text-field>
+					</v-col>
+				</v-row>
+				<v-row dense no-gutters class="">
+					<v-col cols="12">
+						<v-text-field 
+							label="Email" 
+							v-model="email" 
+							required 
+							solo 
+							hide-details="auto" 
+							class="mb-4"
+							:rules="[rules.email]"
+						></v-text-field>
+					</v-col>
+				</v-row>
+				<v-row dense no-gutters class="">
+					<v-col cols="12">
+						<v-textarea 
+							label="Message"
+							v-model="message"
+							required 
+							solo 
+							hide-details="auto" 
+							class="mb-4"
+							:rules="[rules.required]"
+						>
+						</v-textarea>
+					</v-col>
+				</v-row>
+				<v-row dense no-gutters class="">
+					<v-col cols="12">
+						<v-spacer></v-spacer>
+						<v-btn
+							large
+							:block="$vuetify.breakpoint.smAndDown"
+							type="submit"
+							color="primary"
+							class=""
+						>
+							Submit
+						</v-btn>
+					</v-col>
+				</v-row>
+			</v-form>
+		</v-sheet>
+		
 	</v-sheet>
 </template>
 
