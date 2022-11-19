@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-sheet id="gallery" height="auto" class="mt-10">
+		<v-sheet id="gallery" height="auto" class="">
 			<v-row dense no-gutters class="justify-space-between">
 				<v-col
 					v-for="image in images"

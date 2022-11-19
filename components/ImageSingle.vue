@@ -1,7 +1,7 @@
 <template>
 	<v-card
 		height="100%"
-		:class="$vuetify.breakpoint.smAndDown ? 'px-2 pt-2' : 'px-10 pt-10'"
+		:class="$vuetify.breakpoint.smAndDown ? 'px-2 pb-2' : 'px-10 pb-10'"
 		elevation="0"
 	>
 		<v-sheet width="auto" max-width="300" class="ma-0 mx-auto">
