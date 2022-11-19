@@ -1,6 +1,8 @@
 <template>
 	<div>
+		<!-- Hero image -->
 		<HeroSection></HeroSection>
+
 		<!-- About  -->
 		<SectionHeader text="Ane Lill is a norwegian artist based in Trondheim"></SectionHeader>
 

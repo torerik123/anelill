@@ -16,12 +16,6 @@
 				</v-col>
 			</v-row>
 		</v-sheet>
-
-		<v-dialog v-model="dialog">
-			<v-sheet class="pa-10">
-				<ImageCarousel :index="index"></ImageCarousel>
-			</v-sheet>
-		</v-dialog>
 	</div>
 </template>
 
@@ -43,8 +37,7 @@ export default {
 
 	methods: {
 		handleOpen(index) {
-			this.index = index
-			this.dialog = true
+			this.$router.push("/gallery/" + index)
 		},
 	},
 }
