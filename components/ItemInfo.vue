@@ -4,8 +4,8 @@
 			max-height="70vh" contain
 			:src="item.src"
 		>
-
 		</v-img>
+		
 		<v-card-title>{{ item.title }}</v-card-title>
 	</v-sheet>
 </template>

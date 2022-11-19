@@ -4,22 +4,22 @@
 			<v-hover v-slot="{ hover }">
 				
 				<v-img class="" :src="logo" max-height="100" max-width="100" contain
-					:style="hover ? 'cursor: pointer;' : ''" @click="scrollOrRedirect('home')"></v-img>
+					:style="hover ? 'cursor: pointer;' : ''" @click="$router.push('/')"></v-img>
 			</v-hover>
 
 			<v-spacer></v-spacer>
 			<v-toolbar-title class="" v-if="$vuetify.breakpoint.smAndUp">
-				<v-btn text tile @click="scrollOrRedirect('about')">
+				<v-btn text tile @click="$router.push('/about')">
 					About
 				</v-btn>
 			</v-toolbar-title>
 			<v-toolbar-title class="" v-if="$vuetify.breakpoint.smAndUp">
-				<v-btn text tile @click="scrollOrRedirect('gallery')">
+				<v-btn text tile @click="$router.push('/gallery')">
 					Gallery
 				</v-btn>
 			</v-toolbar-title>
 			<v-toolbar-title class="" v-if="$vuetify.breakpoint.smAndUp">
-				<v-btn text tile @click="scrollOrRedirect('contact')">
+				<v-btn text tile @click="$router.push('/contact')">
 					Contact
 				</v-btn>
 			</v-toolbar-title>
@@ -31,23 +31,23 @@
 				<v-list-item>
 					<v-list-item-content>
 						<v-hover v-slot="{ hover }">
-							<v-img :style="hover ? 'cursor: pointer;' : ''" @click="scrollOrRedirect('home')" class="mx-auto"
+							<v-img :style="hover ? 'cursor: pointer;' : ''" @click="$router.push('/')" class="mx-auto"
 								:src="logo" max-height="100" max-width="100" contain></v-img>
 						</v-hover>
 					</v-list-item-content>
 				</v-list-item>
 
-				<v-list-item @click="scrollOrRedirect('about')">
+				<v-list-item @click="$router.push('/about')">
 					<v-list-item-content class="v-btn">
 						About
 					</v-list-item-content>
 				</v-list-item>
-				<v-list-item @click="scrollOrRedirect('gallery')">
+				<v-list-item @click="$router.push('/gallery')">
 					<v-list-item-content class="v-btn">
 						Gallery
 					</v-list-item-content>
 				</v-list-item>
-				<v-list-item @click="scrollOrRedirect('contact')">
+				<v-list-item @click="$router.push('/contact')">
 					<v-list-item-content class="v-btn">
 						Contact
 					</v-list-item-content>
@@ -73,23 +73,6 @@ export default {
 			type: String,
 			default: "",
 		}
-	},
-
-	methods: {
-		async scrollOrRedirect(section) {
-			if (this.isHomePage) {
-				const location = section == "home" ? 0 : `#${section}`
-
-				this.$vuetify.goTo(location)
-			} else {
-				section = section == "home" ? "/" : "/" + section
- 				this.$router.push(section)
-			} 
-				
-			if (this.drawer) {
-				this.drawer = false
-			}
-		},
 	},
 
 	computed: {

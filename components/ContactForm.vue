@@ -6,12 +6,13 @@
 			</v-col>
 		</v-row>
 
-		<p class="text-center" v-if="messageSent">Message sent!</p>
+		<p class="text-center" v-if="messageSent">{{ messageDeliveredText }}</p>
 
 		<v-row dense no-gutters class="">
 			<v-col cols="12">
 				<v-form 
 					ref="form"
+					@submit.prevent="submitForm"
 					class="mx-auto mb-2" 
 					:style="$vuetify.breakpoint.smAndDown ? 'width: 100%;' : 'width: 70%;' "
 				>
@@ -46,7 +47,7 @@
 					</v-textarea>
 					<v-btn
 						large 
-						@click="validate"
+						type="submit"
 						color="primary"
 					>
 						Submit
@@ -75,27 +76,35 @@ export default {
 			email: "",
 			message: "",
 			messageSent: false,
+			messageDeliveredText: "Message sent!",
 		}
 	},
 
 	methods: {
-		validate() {
+		submitForm() {
 			let valid = this.$refs.form.validate()
 
 			if (valid) {
-				console.log("--TODO")
-				console.log("--Send form")
-				console.log(this.name)
-				console.log(this.email)
-				console.log(this.message)
+				const data = { 
+					name: this.name, 
+					email: this.email, 
+					message: this.message, 
+				}
 				
-				this.name = ""
-				this.email = ""
-				this.message = ""
-				
-				this.messageSent = true
-				// action="https://formspree.io/f/xpzoydbv"
-				  // 		method="POST"
+				this.$axios.post("https://formspree.io/f/xzbwwdzy", {
+					body: data,
+					headers: {
+         			   'Accept': 'application/json'
+        				}
+				}).then(response => {
+					if (response.status == 200) {
+						this.messageSent = true
+						this.$refs.form.reset()
+					}
+				}).catch(error => {
+					this.messageDeliveredText = "Something went wrong! Please try again later."
+					console.log(error)
+				})
 			}
 		}
 	}
