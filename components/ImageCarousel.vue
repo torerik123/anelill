@@ -4,7 +4,6 @@
 		:options="{
 		threshold: .5
 		}"
-		min-height="200"
 		transition="fade-transition"
 	>
 		<v-row dense no-gutters>

@@ -4,7 +4,6 @@
 		:options="{
 		threshold: .5
 		}"
-		min-height="200"
 		transition="fade-transition"
 	>
 		<v-sheet class="pt-10 overflow-hidden" height="auto">
@@ -12,7 +11,6 @@
 				width="100%"
 				max-height="80vh"
 				:src="heroImg"
-				:lazy-src="heroImg"
 			></v-img>
 		</v-sheet>
 	</v-lazy>
@@ -28,5 +26,9 @@ export default {
 			heroImg: this.$store.getters.heroImg,	
 		}
 	},
+
+	computed: {
+				
+	}
 }
 </script>
