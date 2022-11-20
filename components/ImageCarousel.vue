@@ -1,5 +1,12 @@
 <template>
-	<div>
+	<v-lazy
+		v-model="isActive"
+		:options="{
+		threshold: .5
+		}"
+		min-height="200"
+		transition="fade-transition"
+	>
 		<v-row dense no-gutters>
 			<v-col cols="12">
 				<v-carousel height="auto" v-model="selectedImg" hide-delimiters>
@@ -34,7 +41,7 @@
 				>Back to gallery</v-btn>
 			</v-col>
 		</v-row>
-	</div>
+	</v-lazy>
 </template>
 
 <script>
@@ -43,6 +50,7 @@ export default {
 
 	data() {
 		return {
+			isActive: false,
 			selectedImg: this.$store.getters.images[this.index] ? this.index : 0,
 			images: this.$store.getters.images,
 		}

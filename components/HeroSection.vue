@@ -24,6 +24,7 @@ export default {
 
 	data() {
 		return {
+			isActive: false,
 			heroImg: this.$store.getters.heroImg,	
 		}
 	},

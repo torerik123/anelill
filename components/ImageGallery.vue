@@ -1,5 +1,12 @@
 <template>
-	<div>
+	<v-lazy
+		v-model="isActive"
+		:options="{
+		threshold: .5
+		}"
+		min-height="200"
+		transition="fade-transition"
+	>
 		<v-sheet id="gallery" height="auto" class="">
 			<v-row dense no-gutters class="justify-space-between">
 				<v-col
@@ -16,7 +23,7 @@
 				</v-col>
 			</v-row>
 		</v-sheet>
-	</div>
+	</v-lazy>
 </template>
 
 <script>
@@ -29,6 +36,7 @@ export default {
 
 	data() {
 		return {
+			isActive: false,
 			images: this.$store.getters.images,
 			dialog: false,
 			index: 0,

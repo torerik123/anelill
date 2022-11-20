@@ -89,6 +89,7 @@ export default {
 
 	data() {
 		return {
+			isActive: false,
 			rules: {
 				required: value => !!value || 'Field can not be empty.',
 				email: value => {
