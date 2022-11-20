@@ -1,11 +1,5 @@
 <template>
-	<v-lazy
-		v-model="isActive"
-		:options="{
-		threshold: .5
-		}"
-		transition="fade-transition"
-	>
+	<div>
 		<v-row dense no-gutters>
 			<v-col cols="12">
 				<v-carousel height="auto" v-model="selectedImg" hide-delimiters>
@@ -40,7 +34,7 @@
 				>Back to gallery</v-btn>
 			</v-col>
 		</v-row>
-	</v-lazy>
+	</div>
 </template>
 
 <script>
