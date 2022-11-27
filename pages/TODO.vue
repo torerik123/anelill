@@ -11,25 +11,3 @@
 		</v-list-item>
 	</v-list>
 </template>
-
-
-
-DATO CMS 
-- HOME
-	- Hero/banner image
-	- Tagline -> "Ane Lill is blablabla..."
-	- Featured images
-		- select from GALLERY
-
-- ABOUT
-	- Header img
-	- Text
-
-GALLERY
-	- Header img
-
-	- POSTS:
-		- Title
-		- size	
-		- Text
-		- status: sold y/n		
