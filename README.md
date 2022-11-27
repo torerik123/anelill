@@ -1,5 +1,6 @@
 # Tech stack
 - Vue
+- Vuetify
 - Nuxt
 - DatoCMS
 
