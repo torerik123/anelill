@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Ane Lill Nerbøvik',
-    title: 'Ane Lill Nerbøvik',
+    titleTemplate: 'Ane Lill Nerbøvik',
+    title: '',
     htmlAttrs: {
       lang: 'en',
     },
