@@ -1,7 +1,7 @@
 <template>
 	<v-app dark>
-		<TheHeader :customClass="$vuetify.breakpoint.smAndDown ? 'px-5' : 'px-15'"></TheHeader>
-		<v-main>
+		<TheHeader class="app" :customClass="$vuetify.breakpoint.smAndDown ? 'px-5' : 'px-15'"></TheHeader>
+		<v-main class="app">
 			<v-container fluid :class="$vuetify.breakpoint.smAndDown ? 'px-5 py-0' : 'px-15 py-0'">
 				<Nuxt />
 			</v-container>
@@ -28,7 +28,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
 
-.v-application .v-application--wrap * {
+.app {
 	font-family: "Sono", sans-serif !important;
 }
 </style>
