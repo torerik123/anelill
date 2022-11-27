@@ -1,4 +1,9 @@
-# alfolio
+# Tech stack
+- Vue
+- Nuxt
+- DatoCMS
+
+
 
 ## Build Setup
 
