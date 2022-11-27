@@ -3,11 +3,16 @@
 		<PageHeader :headerImg="headerImg"></PageHeader>
 		<SectionHeader text="Ane Lill Nerbøvik"></SectionHeader>
 
-		<v-card elevation="0">
-			<v-card-text class="text-center">
-				{{ text }}
-			</v-card-text>
-		</v-card>
+		<v-row dense no-gutters>
+			<v-spacer></v-spacer>
+			<v-col :cols="$vuetify.breakpoint.mdAndUp ? 7 : 'auto'">
+				<v-card elevation="0" class="">
+					<v-card-text v-html="text">
+					</v-card-text>
+				</v-card>
+			</v-col>
+			<v-spacer></v-spacer>
+		</v-row>
 	</div>
 </template>
 
