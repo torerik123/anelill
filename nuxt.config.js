@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - alfolio',
-    title: 'alfolio',
+    titleTemplate: '%s - Ane Lill Nerbøvik',
+    title: 'Ane Lill Nerbøvik',
     htmlAttrs: {
       lang: 'en',
     },
@@ -43,12 +43,17 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@voorhoede/nuxt-datocms-module',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
+  },
+
+  datocms: {
+    datocmsReadOnlyToken: process.env.DATOCMS
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

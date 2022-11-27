@@ -15,7 +15,7 @@ export default {
 
 	data() {
 		return {
-			headerImg: this.$store.getters.images[2].src,
+			headerImg: this.$store.getters.headerImages.contact,
 		}	
 	},
 }

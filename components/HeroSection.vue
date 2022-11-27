@@ -23,12 +23,8 @@ export default {
 	data() {
 		return {
 			isActive: false,
-			heroImg: this.$store.getters.heroImg,	
+			heroImg: this.$store.getters.headerImages.home,	
 		}
 	},
-
-	computed: {
-				
-	}
 }
 </script>

@@ -64,7 +64,7 @@ export default {
 	data() {
 		return {
 			drawer: false,
-		    logo: this.$store.getters.headerImg,
+		    logo: this.$store.getters.logo,
 		}
 	},
 

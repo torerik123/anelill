@@ -4,7 +4,7 @@
 		<HeroSection></HeroSection>
 
 		<!-- About  -->
-		<SectionHeader text="Ane Lill is a norwegian artist based in Trondheim"></SectionHeader>
+		<SectionHeader :text="introText"></SectionHeader>
 
 		<!-- Gallery  -->
 		<ImageGallery></ImageGallery>
@@ -28,6 +28,7 @@ export default {
 	data() {
 		return {
 			images: this.$store.getters.images,
+			introText: this.$store.getters.introText,
 		}	
 	},
 }
