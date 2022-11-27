@@ -1,5 +1,7 @@
 <template>
 	<v-list>
+		<v-list-item>/about - fix header</v-list-item>
+		<v-list-item>Redirect /admin to datocms</v-list-item>
 		<v-list-item>Set favicon</v-list-item>
 		<v-list-item>Use optimized images -> webp from datoCMS</v-list-item>
 		<v-list-item>Animations</v-list-item>

@@ -27,16 +27,6 @@
 					<v-icon class="pt-2 pb-0" color="red" small>mdi-checkbox-blank-circle</v-icon>
 				</v-col>
 			</v-row>
-			<!-- <v-card-subtitle class="pl-0 pt-0 pb-4" v-if="image.size">{{ image.size }}</v-card-subtitle> -->
-			<!-- <v-card-actions class="pl-0">
-				<v-btn
-					tile
-					outlined
-					@click="viewImg"
-				>
-					Info
-				</v-btn> -->
-			</v-card-actions>
 		</v-sheet>
 	</v-card>
 </template>
