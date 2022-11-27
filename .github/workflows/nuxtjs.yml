@@ -3,6 +3,8 @@
 # To get started with Nuxt see: https://nuxtjs.org/docs/get-started/installation
 #
 name: Deploy Nuxt site to Pages
+env: 
+  DATOCMS: ${{ secrets.DATOCMS }}
 
 on:
   # Runs on pushes targeting the default branch
