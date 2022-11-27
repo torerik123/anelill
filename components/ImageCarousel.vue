@@ -16,23 +16,36 @@
 			</v-carousel>
 			</v-col>
 		</v-row>
+
 		<v-row>
 			<v-col cols="12">
 				<v-card elevation="0">
 					<v-card-title class="justify-center">{{ images[selectedImg].title }}</v-card-title>
 					<v-card-subtitle class="text-center">{{ images[selectedImg].size }}</v-card-subtitle>
-					<v-card-text class="text-center">{{ images[selectedImg].description }}</v-card-text>
+					<v-card-text class="text-center">
+						{{ images[selectedImg].description }}
+					</v-card-text>
+					<v-card-text class="text-center">
+						To inquire about available paintings, 
+						please <nuxt-link to="/contact">contact me</nuxt-link>.
+					</v-card-text>
 				</v-card>
 			</v-col>
 		</v-row>
+
 		<v-row dense no-gutters class="mt-10">
-			<v-col cols="auto" class="mx-auto">
+			<v-spacer></v-spacer>
+			<v-col cols="auto" class="">
 				<v-btn 
 					color="primary" 
 					nuxt 
 					to="/gallery"
-				>Back to gallery</v-btn>
+					large
+				>
+					Back to gallery
+				</v-btn>
 			</v-col>
+			<v-spacer></v-spacer>
 		</v-row>
 	</div>
 </template>

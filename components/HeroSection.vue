@@ -9,7 +9,7 @@
 		<v-sheet class="pt-10 overflow-hidden" height="auto">
 			<v-img
 				width="100%"
-				max-height="80vh"
+				max-height="60vh"
 				:src="heroImg"
 			></v-img>
 		</v-sheet>
