@@ -2,7 +2,7 @@
 	<v-footer color="white" absolute app>
 		<v-row dense no-gutters>
 			<v-col cols="auto" align-self=center>
-				<span>&copy; {{ new Date().getFullYear() }} | Ane Lill Nerbøvik</span> 
+				<span>&copy; {{ new Date().getFullYear() }} | Ane Lill</span> 
 			</v-col>
 			<v-spacer></v-spacer>
 			<v-col cols="auto">
