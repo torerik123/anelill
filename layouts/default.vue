@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap'); */
 
 .app {
 	font-family: "Sono", sans-serif !important;
