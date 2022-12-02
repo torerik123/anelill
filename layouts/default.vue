@@ -6,7 +6,7 @@
 				<Nuxt />
 			</v-container>
 		</v-main>
-		<TheFooter :customClass="$vuetify.breakpoint.smAndDown ? 'px-5' : 'px-15'"></TheFooter>
+		<TheFooter class="app" :customClass="$vuetify.breakpoint.smAndDown ? 'px-5' : 'px-15'"></TheFooter>
 	</v-app>
 </template>
 
@@ -17,17 +17,10 @@ import TheFooter from '~/components/TheFooter.vue';
 export default {
 	name: 'DefaultLayout',
 	components: { TheHeader, TheFooter },
-
-	data() {
-		return {
-		}
-	},
 }
 </script>
 
 <style>
-/* @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap'); */
-
 .app {
 	font-family: "Sono", sans-serif !important;
 }
