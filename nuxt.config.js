@@ -23,6 +23,7 @@ export default {
     link: [
 		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 		{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Sono&display=swap' },
+		{ rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css' },
 	],
   },
 
@@ -30,7 +31,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/aos.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

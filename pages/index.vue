@@ -5,12 +5,12 @@
 
 		<!-- About  -->
 		<SectionHeader :text="introText"></SectionHeader>
-
+		
 		<!-- Gallery  -->
 		<ImageGallery></ImageGallery>
 
 		<!-- Contact -->
-		<ContactForm class="mb-10"></ContactForm>
+		<ContactForm v-animate-onscroll="'animated slideInUp'"  class="mb-10"></ContactForm>
 	</div>
 </template>
 
