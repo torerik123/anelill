@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- Hero image -->
-		<HeroSection></HeroSection>
+		<HeroSection :image="heroImg"></HeroSection>
 
 		<!-- About  -->
 		<SectionHeader :text="introText"></SectionHeader>
@@ -29,7 +29,12 @@ export default {
 		return {
 			images: this.$store.getters.images,
 			introText: this.$store.getters.introText,
+			heroImg: this.$store.getters.headerImages.home,
 		}	
 	},
 }
 </script>
+
+<style>
+	
+</style>

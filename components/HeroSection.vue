@@ -10,8 +10,14 @@
 			<v-img
 				width="100%"
 				max-height="60vh"
-				:src="heroImg"
-			></v-img>
+				:src="image"
+				transition="slide-y-transition"
+				v-show="show"
+			>
+				<template v-slot:placeholder>
+					<v-sheet color="gray" height="100%" width="100%"></v-sheet>
+				</template>
+			</v-img>
 		</v-sheet>
 	</v-lazy>
 </template>
@@ -23,8 +29,19 @@ export default {
 	data() {
 		return {
 			isActive: false,
-			heroImg: this.$store.getters.headerImages.home,	
+			show: false
 		}
+	},
+
+	props: {
+		image: {
+			type: String,
+			default: false,
+		},
+	},
+
+	mounted() {
+		this.show = true
 	},
 }
 </script>
