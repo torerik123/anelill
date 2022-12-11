@@ -68,5 +68,11 @@ export default {
 			default: 0,
 		},
 	},
+
+	watch: {
+		selectedImg(id) {
+			this.$router.replace({ path: `/gallery/${id}` }) 
+		},	
+	}
 }
 </script>
