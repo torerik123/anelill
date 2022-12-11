@@ -36,6 +36,4 @@ export default {
 </script>
 
 <style>
-	.visible { visibility: visible; }
-    .invisible { visibility: hidden; }
 </style>
