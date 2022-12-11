@@ -1,10 +1,16 @@
 <template>
 	<v-card
 		height="100%"
-		:class="$vuetify.breakpoint.smAndDown ? 'px-2 pb-4' : 'px-10 pb-12'"
 		elevation="0"
+		v-intersect.quiet="onIntersect"
+		:class="$vuetify.breakpoint.smAndDown ? 'px-2 pb-4': 'px-10 pb-12'"
 	>
-		<v-sheet width="auto" max-width="300" class="ma-0 mx-auto">
+		<v-sheet 
+			width="auto" 
+			max-width="300" 
+			class="ma-0 mx-auto"
+			:class="isIntersecting ? 'animated fadeInUp' : '' "
+		>
 			<v-hover  v-slot="{ hover }">
 				<v-img
 					:style="hover ? 'cursor: pointer;' : ''" 
@@ -43,11 +49,32 @@ export default {
 		},
 	},
 
+	data() {
+		return  {
+			isIntersecting: false,
+			scrollDown: null,
+		}
+	},
+
 	methods: {
 		viewImg() {
 			const index = this.$store.getters.images.indexOf(this.image)
 			this.$emit("viewImg", index)
-		},	
+		},
+		
+		onIntersect (entries, observer) {
+			if (entries[0].boundingClientRect.top < 0) {
+				if (!entries[0].isIntersecting) {
+					// left viewport at the top edge, hence scroll direction is down
+					this.isIntersecting = entries[0].isIntersecting
+				} 
+			} else {
+				this.isIntersecting = entries[0].isIntersecting // trigger on inital page load
+			}
+      
+
+
+		},
 	}
 }
 </script>

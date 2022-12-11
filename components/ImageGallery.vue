@@ -15,7 +15,6 @@
 					class=""
 				>
 					<ImageSingle 
-						v-animate-onscroll="'animated slideInUp'"
 						:image="image"
 						@open="handleOpen"
 						@viewImg="handleOpen" 

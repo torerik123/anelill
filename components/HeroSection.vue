@@ -9,6 +9,7 @@
 		<v-sheet class="pt-10 overflow-hidden" height="auto">
 			<v-img
 				width="100%"
+				min-height="40vh"
 				max-height="60vh"
 				:src="image"
 				transition="slide-y-transition"

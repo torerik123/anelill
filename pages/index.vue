@@ -10,7 +10,7 @@
 		<ImageGallery></ImageGallery>
 
 		<!-- Contact -->
-		<ContactForm v-animate-onscroll="'animated slideInUp'"  class="mb-10"></ContactForm>
+		<ContactForm v-animate-onscroll="'animated slideInUp'" class="mb-10"></ContactForm>
 	</div>
 </template>
 
@@ -36,5 +36,6 @@ export default {
 </script>
 
 <style>
-	
+	.visible { visibility: visible; }
+    .invisible { visibility: hidden; }
 </style>
